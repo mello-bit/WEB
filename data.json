@@ -3,7 +3,7 @@
       "GeoObjectCollection": {
          "metaDataProperty": {
             "GeocoderResponseMetaData": {
-               "request": "\u0413\u0435\u0440\u043c\u0430\u043d\u0438\u044f",
+               "request": "\u0422\u043e\u043a\u0438\u043e",
                "results": "1",
                "found": "1"
             }
@@ -14,36 +14,51 @@
                   "metaDataProperty": {
                      "GeocoderMetaData": {
                         "precision": "other",
-                        "text": "\u0413\u0435\u0440\u043c\u0430\u043d\u0438\u044f",
-                        "kind": "country",
+                        "text": "\u042f\u043f\u043e\u043d\u0438\u044f, \u0422\u043e\u043a\u0438\u043e",
+                        "kind": "locality",
                         "Address": {
-                           "country_code": "DE",
-                           "formatted": "\u0413\u0435\u0440\u043c\u0430\u043d\u0438\u044f",
+                           "country_code": "JP",
+                           "formatted": "\u042f\u043f\u043e\u043d\u0438\u044f, \u0422\u043e\u043a\u0438\u043e",
                            "Components": [
                               {
                                  "kind": "country",
-                                 "name": "\u0413\u0435\u0440\u043c\u0430\u043d\u0438\u044f"
+                                 "name": "\u042f\u043f\u043e\u043d\u0438\u044f"
+                              },
+                              {
+                                 "kind": "province",
+                                 "name": "\u043f\u0440\u0435\u0444\u0435\u043a\u0442\u0443\u0440\u0430 \u0422\u043e\u043a\u0438\u043e"
+                              },
+                              {
+                                 "kind": "locality",
+                                 "name": "\u0422\u043e\u043a\u0438\u043e"
                               }
                            ]
                         },
                         "AddressDetails": {
                            "Country": {
-                              "AddressLine": "\u0413\u0435\u0440\u043c\u0430\u043d\u0438\u044f",
-                              "CountryNameCode": "DE",
-                              "CountryName": "\u0413\u0435\u0440\u043c\u0430\u043d\u0438\u044f"
+                              "AddressLine": "\u042f\u043f\u043e\u043d\u0438\u044f, \u0422\u043e\u043a\u0438\u043e",
+                              "CountryNameCode": "JP",
+                              "CountryName": "\u042f\u043f\u043e\u043d\u0438\u044f",
+                              "AdministrativeArea": {
+                                 "AdministrativeAreaName": "\u043f\u0440\u0435\u0444\u0435\u043a\u0442\u0443\u0440\u0430 \u0422\u043e\u043a\u0438\u043e",
+                                 "Locality": {
+                                    "LocalityName": "\u0422\u043e\u043a\u0438\u043e"
+                                 }
+                              }
                            }
                         }
                      }
                   },
-                  "name": "\u0413\u0435\u0440\u043c\u0430\u043d\u0438\u044f",
+                  "name": "\u0422\u043e\u043a\u0438\u043e",
+                  "description": "\u042f\u043f\u043e\u043d\u0438\u044f",
                   "boundedBy": {
                      "Envelope": {
-                        "lowerCorner": "5.866673 47.270067",
-                        "upperCorner": "15.041831 55.187502"
+                        "lowerCorner": "138.943099 35.50113",
+                        "upperCorner": "139.919002 35.8979"
                      }
                   },
                   "Point": {
-                     "pos": "10.551701 51.228764"
+                     "pos": "139.753927 35.681729"
                   }
                }
             }
