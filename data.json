@@ -1,0 +1,53 @@
+{
+   "response": {
+      "GeoObjectCollection": {
+         "metaDataProperty": {
+            "GeocoderResponseMetaData": {
+               "request": "\u0413\u0435\u0440\u043c\u0430\u043d\u0438\u044f",
+               "results": "1",
+               "found": "1"
+            }
+         },
+         "featureMember": [
+            {
+               "GeoObject": {
+                  "metaDataProperty": {
+                     "GeocoderMetaData": {
+                        "precision": "other",
+                        "text": "\u0413\u0435\u0440\u043c\u0430\u043d\u0438\u044f",
+                        "kind": "country",
+                        "Address": {
+                           "country_code": "DE",
+                           "formatted": "\u0413\u0435\u0440\u043c\u0430\u043d\u0438\u044f",
+                           "Components": [
+                              {
+                                 "kind": "country",
+                                 "name": "\u0413\u0435\u0440\u043c\u0430\u043d\u0438\u044f"
+                              }
+                           ]
+                        },
+                        "AddressDetails": {
+                           "Country": {
+                              "AddressLine": "\u0413\u0435\u0440\u043c\u0430\u043d\u0438\u044f",
+                              "CountryNameCode": "DE",
+                              "CountryName": "\u0413\u0435\u0440\u043c\u0430\u043d\u0438\u044f"
+                           }
+                        }
+                     }
+                  },
+                  "name": "\u0413\u0435\u0440\u043c\u0430\u043d\u0438\u044f",
+                  "boundedBy": {
+                     "Envelope": {
+                        "lowerCorner": "5.866673 47.270067",
+                        "upperCorner": "15.041831 55.187502"
+                     }
+                  },
+                  "Point": {
+                     "pos": "10.551701 51.228764"
+                  }
+               }
+            }
+         ]
+      }
+   }
+}
