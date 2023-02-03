@@ -42,10 +42,10 @@ class MyWidget(QMainWindow):
         self.image.setPixmap(pixmap)
     
     def keyPressEvent(self, event) -> None:
-        if event.key() == Q.Key_Up:
+        if event.key() == Q.Key_PageUp:
             self.z = min(11, max(1, self.z + 1))
             self.set_image(True)
-        elif event.key() == Q.Key_Down:
+        elif event.key() == Q.Key_PageDown:
             self.z = min(11, max(1, self.z - 1))
             self.set_image(True)
 
