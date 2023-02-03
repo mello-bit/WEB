@@ -57,7 +57,7 @@ class MyWidget(QMainWindow):
             pos = ','.join(pos.split())
             self.dl, self.sd = map(float, pos.split(','))
         req = requests.get(
-            f"https://static-maps.yandex.ru/1.x/?ll={self.dl},{self.sd}&z={self.z}&l={self.scheme}"
+            f"https://static-maps.yandex.ru/1.x/?ll={self.dl},{self.sd}&z={self.z}&l={self.scheme}&pt={self.dl},{self.sd}"
         )
 
         if not req:
