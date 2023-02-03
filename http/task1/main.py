@@ -8,11 +8,11 @@ b = input()
 
 req = requests.get(
     f"{ad}:{port}?a={a}&b={b}"
-).json()
+)
 
-nums = req['result']
-nums = ' '.join(sorted(nums))
-code = req['check']
-
-print(nums)
-print(code)
+if req.ok:
+    req = req.json()
+    nums = req['result']
+    code = req['check']
+    print(*sorted(nums))
+    print(code)
