@@ -1,0 +1,79 @@
+{
+   "response": {
+      "GeoObjectCollection": {
+         "metaDataProperty": {
+            "GeocoderResponseMetaData": {
+               "request": "\u0423\u043b\u0438\u0446\u0430 \u0447\u0435\u0447\u0443\u043b\u0438\u043d\u0430",
+               "results": "1",
+               "found": "1"
+            }
+         },
+         "featureMember": [
+            {
+               "GeoObject": {
+                  "metaDataProperty": {
+                     "GeocoderMetaData": {
+                        "precision": "street",
+                        "text": "\u0420\u043e\u0441\u0441\u0438\u044f, \u041c\u043e\u0441\u043a\u0432\u0430, \u0443\u043b\u0438\u0446\u0430 \u0427\u0435\u0447\u0443\u043b\u0438\u043d\u0430",
+                        "kind": "street",
+                        "Address": {
+                           "country_code": "RU",
+                           "formatted": "\u0420\u043e\u0441\u0441\u0438\u044f, \u041c\u043e\u0441\u043a\u0432\u0430, \u0443\u043b\u0438\u0446\u0430 \u0427\u0435\u0447\u0443\u043b\u0438\u043d\u0430",
+                           "Components": [
+                              {
+                                 "kind": "country",
+                                 "name": "\u0420\u043e\u0441\u0441\u0438\u044f"
+                              },
+                              {
+                                 "kind": "province",
+                                 "name": "\u0426\u0435\u043d\u0442\u0440\u0430\u043b\u044c\u043d\u044b\u0439 \u0444\u0435\u0434\u0435\u0440\u0430\u043b\u044c\u043d\u044b\u0439 \u043e\u043a\u0440\u0443\u0433"
+                              },
+                              {
+                                 "kind": "province",
+                                 "name": "\u041c\u043e\u0441\u043a\u0432\u0430"
+                              },
+                              {
+                                 "kind": "locality",
+                                 "name": "\u041c\u043e\u0441\u043a\u0432\u0430"
+                              },
+                              {
+                                 "kind": "street",
+                                 "name": "\u0443\u043b\u0438\u0446\u0430 \u0427\u0435\u0447\u0443\u043b\u0438\u043d\u0430"
+                              }
+                           ]
+                        },
+                        "AddressDetails": {
+                           "Country": {
+                              "AddressLine": "\u0420\u043e\u0441\u0441\u0438\u044f, \u041c\u043e\u0441\u043a\u0432\u0430, \u0443\u043b\u0438\u0446\u0430 \u0427\u0435\u0447\u0443\u043b\u0438\u043d\u0430",
+                              "CountryNameCode": "RU",
+                              "CountryName": "\u0420\u043e\u0441\u0441\u0438\u044f",
+                              "AdministrativeArea": {
+                                 "AdministrativeAreaName": "\u041c\u043e\u0441\u043a\u0432\u0430",
+                                 "Locality": {
+                                    "LocalityName": "\u041c\u043e\u0441\u043a\u0432\u0430",
+                                    "Thoroughfare": {
+                                       "ThoroughfareName": "\u0443\u043b\u0438\u0446\u0430 \u0427\u0435\u0447\u0443\u043b\u0438\u043d\u0430"
+                                    }
+                                 }
+                              }
+                           }
+                        }
+                     }
+                  },
+                  "name": "\u0443\u043b\u0438\u0446\u0430 \u0427\u0435\u0447\u0443\u043b\u0438\u043d\u0430",
+                  "description": "\u041c\u043e\u0441\u043a\u0432\u0430, \u0420\u043e\u0441\u0441\u0438\u044f",
+                  "boundedBy": {
+                     "Envelope": {
+                        "lowerCorner": "37.81919 55.778679",
+                        "upperCorner": "37.837839 55.782866"
+                     }
+                  },
+                  "Point": {
+                     "pos": "37.828506 55.7808"
+                  }
+               }
+            }
+         ]
+      }
+   }
+}
