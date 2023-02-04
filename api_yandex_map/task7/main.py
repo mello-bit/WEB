@@ -13,7 +13,7 @@ api_key = "5d666306-8732-43c4-a011-a9cc7afada11"
 class MyWidget(QMainWindow):
     def __init__(self) -> None:
         super().__init__()
-        uic.loadUi(os.path.join("api_yandex_map", "task6", "main.ui"), self)
+        uic.loadUi(os.path.join("api_yandex_map", "task7", "main.ui"), self)
         self.z = 1
         self.lc = None
         self.scheme = "map"
@@ -23,6 +23,13 @@ class MyWidget(QMainWindow):
         self.map.clicked.connect(self.set_map)
         self.sat.clicked.connect(self.set_sat)
         self.hybrid.clicked.connect(self.set_hybrid)
+        self.thr_off.clicked.connect(self.throw_off)
+    
+    def throw_off(self):
+        self.z = 1
+        self.dl = 0
+        self.sd = 0
+        self.set_image(fl=True, hasGeos=True)
 
     def set_map(self):
         self.scheme = "map"
@@ -57,7 +64,7 @@ class MyWidget(QMainWindow):
             pos = ','.join(pos.split())
             self.dl, self.sd = map(float, pos.split(','))
         req = requests.get(
-            f"https://static-maps.yandex.ru/1.x/?ll={self.dl},{self.sd}&z={self.z}&l={self.scheme}&pt={self.dl},{self.sd}"
+            f"https://static-maps.yandex.ru/1.x/?ll={self.dl},{self.sd}&z={self.z}&l={self.scheme}"
         )
 
         if not req:
