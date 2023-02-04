@@ -3,7 +3,13 @@
       "GeoObjectCollection": {
          "metaDataProperty": {
             "GeocoderResponseMetaData": {
-               "request": "\u041c\u043e\u0441\u043a\u0432\u0430 \u0434\u043e\u043c 11 \u0443\u043b\u0438\u0446\u0430 \u0447\u0435\u0447\u0443\u043b\u0438\u043d\u0430",
+               "boundedBy": {
+                  "Envelope": {
+                     "lowerCorner": "37.038186 55.312148",
+                     "upperCorner": "38.2026 56.190802"
+                  }
+               },
+               "request": "\u041c\u043e\u0441\u043a\u0432\u0430",
                "results": "1",
                "found": "1"
             }
@@ -13,13 +19,12 @@
                "GeoObject": {
                   "metaDataProperty": {
                      "GeocoderMetaData": {
-                        "precision": "number",
-                        "text": "\u0420\u043e\u0441\u0441\u0438\u044f, \u041c\u043e\u0441\u043a\u0432\u0430, \u0443\u043b\u0438\u0446\u0430 \u0427\u0435\u0447\u0443\u043b\u0438\u043d\u0430, 11\u043a1",
-                        "kind": "house",
+                        "precision": "other",
+                        "text": "\u0420\u043e\u0441\u0441\u0438\u044f, \u041c\u043e\u0441\u043a\u0432\u0430",
+                        "kind": "province",
                         "Address": {
                            "country_code": "RU",
-                           "formatted": "\u0420\u043e\u0441\u0441\u0438\u044f, \u041c\u043e\u0441\u043a\u0432\u0430, \u0443\u043b\u0438\u0446\u0430 \u0427\u0435\u0447\u0443\u043b\u0438\u043d\u0430, 11\u043a1",
-                           "postal_code": "105568",
+                           "formatted": "\u0420\u043e\u0441\u0441\u0438\u044f, \u041c\u043e\u0441\u043a\u0432\u0430",
                            "Components": [
                               {
                                  "kind": "country",
@@ -32,55 +37,31 @@
                               {
                                  "kind": "province",
                                  "name": "\u041c\u043e\u0441\u043a\u0432\u0430"
-                              },
-                              {
-                                 "kind": "locality",
-                                 "name": "\u041c\u043e\u0441\u043a\u0432\u0430"
-                              },
-                              {
-                                 "kind": "street",
-                                 "name": "\u0443\u043b\u0438\u0446\u0430 \u0427\u0435\u0447\u0443\u043b\u0438\u043d\u0430"
-                              },
-                              {
-                                 "kind": "house",
-                                 "name": "11\u043a1"
                               }
                            ]
                         },
                         "AddressDetails": {
                            "Country": {
-                              "AddressLine": "\u0420\u043e\u0441\u0441\u0438\u044f, \u041c\u043e\u0441\u043a\u0432\u0430, \u0443\u043b\u0438\u0446\u0430 \u0427\u0435\u0447\u0443\u043b\u0438\u043d\u0430, 11\u043a1",
+                              "AddressLine": "\u0420\u043e\u0441\u0441\u0438\u044f, \u041c\u043e\u0441\u043a\u0432\u0430",
                               "CountryNameCode": "RU",
                               "CountryName": "\u0420\u043e\u0441\u0441\u0438\u044f",
                               "AdministrativeArea": {
-                                 "AdministrativeAreaName": "\u041c\u043e\u0441\u043a\u0432\u0430",
-                                 "Locality": {
-                                    "LocalityName": "\u041c\u043e\u0441\u043a\u0432\u0430",
-                                    "Thoroughfare": {
-                                       "ThoroughfareName": "\u0443\u043b\u0438\u0446\u0430 \u0427\u0435\u0447\u0443\u043b\u0438\u043d\u0430",
-                                       "Premise": {
-                                          "PremiseNumber": "11\u043a1",
-                                          "PostalCode": {
-                                             "PostalCodeNumber": "105568"
-                                          }
-                                       }
-                                    }
-                                 }
+                                 "AdministrativeAreaName": "\u041c\u043e\u0441\u043a\u0432\u0430"
                               }
                            }
                         }
                      }
                   },
-                  "name": "\u0443\u043b\u0438\u0446\u0430 \u0427\u0435\u0447\u0443\u043b\u0438\u043d\u0430, 11\u043a1",
-                  "description": "\u041c\u043e\u0441\u043a\u0432\u0430, \u0420\u043e\u0441\u0441\u0438\u044f",
+                  "name": "\u041c\u043e\u0441\u043a\u0432\u0430",
+                  "description": "\u0420\u043e\u0441\u0441\u0438\u044f",
                   "boundedBy": {
                      "Envelope": {
-                        "lowerCorner": "37.82635 55.779277",
-                        "upperCorner": "37.83456 55.783904"
+                        "lowerCorner": "36.803268 55.142226",
+                        "upperCorner": "37.967799 56.021286"
                      }
                   },
                   "Point": {
-                     "pos": "37.830455 55.78159"
+                     "pos": "37.617698 55.755864"
                   }
                }
             }
