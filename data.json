@@ -3,7 +3,7 @@
       "GeoObjectCollection": {
          "metaDataProperty": {
             "GeocoderResponseMetaData": {
-               "request": "\u0423\u043b\u0438\u0446\u0430 \u0447\u0435\u0447\u0443\u043b\u0438\u043d\u0430",
+               "request": "\u041c\u043e\u0441\u043a\u0432\u0430 \u0434\u043e\u043c 11 \u0443\u043b\u0438\u0446\u0430 \u0447\u0435\u0447\u0443\u043b\u0438\u043d\u0430",
                "results": "1",
                "found": "1"
             }
@@ -13,12 +13,13 @@
                "GeoObject": {
                   "metaDataProperty": {
                      "GeocoderMetaData": {
-                        "precision": "street",
-                        "text": "\u0420\u043e\u0441\u0441\u0438\u044f, \u041c\u043e\u0441\u043a\u0432\u0430, \u0443\u043b\u0438\u0446\u0430 \u0427\u0435\u0447\u0443\u043b\u0438\u043d\u0430",
-                        "kind": "street",
+                        "precision": "number",
+                        "text": "\u0420\u043e\u0441\u0441\u0438\u044f, \u041c\u043e\u0441\u043a\u0432\u0430, \u0443\u043b\u0438\u0446\u0430 \u0427\u0435\u0447\u0443\u043b\u0438\u043d\u0430, 11\u043a1",
+                        "kind": "house",
                         "Address": {
                            "country_code": "RU",
-                           "formatted": "\u0420\u043e\u0441\u0441\u0438\u044f, \u041c\u043e\u0441\u043a\u0432\u0430, \u0443\u043b\u0438\u0446\u0430 \u0427\u0435\u0447\u0443\u043b\u0438\u043d\u0430",
+                           "formatted": "\u0420\u043e\u0441\u0441\u0438\u044f, \u041c\u043e\u0441\u043a\u0432\u0430, \u0443\u043b\u0438\u0446\u0430 \u0427\u0435\u0447\u0443\u043b\u0438\u043d\u0430, 11\u043a1",
+                           "postal_code": "105568",
                            "Components": [
                               {
                                  "kind": "country",
@@ -39,12 +40,16 @@
                               {
                                  "kind": "street",
                                  "name": "\u0443\u043b\u0438\u0446\u0430 \u0427\u0435\u0447\u0443\u043b\u0438\u043d\u0430"
+                              },
+                              {
+                                 "kind": "house",
+                                 "name": "11\u043a1"
                               }
                            ]
                         },
                         "AddressDetails": {
                            "Country": {
-                              "AddressLine": "\u0420\u043e\u0441\u0441\u0438\u044f, \u041c\u043e\u0441\u043a\u0432\u0430, \u0443\u043b\u0438\u0446\u0430 \u0427\u0435\u0447\u0443\u043b\u0438\u043d\u0430",
+                              "AddressLine": "\u0420\u043e\u0441\u0441\u0438\u044f, \u041c\u043e\u0441\u043a\u0432\u0430, \u0443\u043b\u0438\u0446\u0430 \u0427\u0435\u0447\u0443\u043b\u0438\u043d\u0430, 11\u043a1",
                               "CountryNameCode": "RU",
                               "CountryName": "\u0420\u043e\u0441\u0441\u0438\u044f",
                               "AdministrativeArea": {
@@ -52,7 +57,13 @@
                                  "Locality": {
                                     "LocalityName": "\u041c\u043e\u0441\u043a\u0432\u0430",
                                     "Thoroughfare": {
-                                       "ThoroughfareName": "\u0443\u043b\u0438\u0446\u0430 \u0427\u0435\u0447\u0443\u043b\u0438\u043d\u0430"
+                                       "ThoroughfareName": "\u0443\u043b\u0438\u0446\u0430 \u0427\u0435\u0447\u0443\u043b\u0438\u043d\u0430",
+                                       "Premise": {
+                                          "PremiseNumber": "11\u043a1",
+                                          "PostalCode": {
+                                             "PostalCodeNumber": "105568"
+                                          }
+                                       }
                                     }
                                  }
                               }
@@ -60,16 +71,16 @@
                         }
                      }
                   },
-                  "name": "\u0443\u043b\u0438\u0446\u0430 \u0427\u0435\u0447\u0443\u043b\u0438\u043d\u0430",
+                  "name": "\u0443\u043b\u0438\u0446\u0430 \u0427\u0435\u0447\u0443\u043b\u0438\u043d\u0430, 11\u043a1",
                   "description": "\u041c\u043e\u0441\u043a\u0432\u0430, \u0420\u043e\u0441\u0441\u0438\u044f",
                   "boundedBy": {
                      "Envelope": {
-                        "lowerCorner": "37.81919 55.778679",
-                        "upperCorner": "37.837839 55.782866"
+                        "lowerCorner": "37.82635 55.779277",
+                        "upperCorner": "37.83456 55.783904"
                      }
                   },
                   "Point": {
-                     "pos": "37.828506 55.7808"
+                     "pos": "37.830455 55.78159"
                   }
                }
             }
