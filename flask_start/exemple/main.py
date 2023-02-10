@@ -1,9 +1,8 @@
-from flask import Flask
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
 
-@app.route('/')
 @app.route('/index')
 def index():
     return "На марсе будут яблони цвести"
@@ -11,7 +10,7 @@ def index():
 
 @app.route('/')
 def clesh():
-    return "Колонизация Марса"
+    return render_template("/index.html")
 
 
 @app.route('/image_mars')
