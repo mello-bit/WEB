@@ -2,17 +2,20 @@ import argparse
 
 
 def count_lines(file):
-
     try:
         with open(file) as fl:
             return len(fl.readlines())
 
-    except FileNotFoundError:
+    except FileNotFoundError or FileNotFoundError:
         return 0
 
 
-parser = argparse.ArgumentParser()
-parser.add_argument("--file")
-args = parser.parse_args()
+def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--file")
+    args = parser.parse_args()
+    print(count_lines(args.file))
 
-print(count_lines(args.file))
+
+if __name__ == '__main__':
+    main()
