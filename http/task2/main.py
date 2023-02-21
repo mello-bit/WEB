@@ -35,12 +35,6 @@ toponym_coodrinates = toponym["Point"]["pos"]
 # Долгота и широта:
 toponym_longitude, toponym_lattitude = toponym_coodrinates.split(" ")
 
-delta = float(toponym["boundedBy"]["Envelope"]["upperCorner"].split(' ')[0]) - \
-    float(toponym["boundedBy"]["Envelope"]["lowerCorner"].split(' ')[0])
-
-delta2 = float(toponym["boundedBy"]["Envelope"]["upperCorner"].split(' ')[1]) - \
-    float(toponym["boundedBy"]["Envelope"]["lowerCorner"].split(' ')[1])
-
 delta = count_delta(toponym["boundedBy"]["Envelope"]["lowerCorner"],
                     toponym["boundedBy"]["Envelope"]["upperCorner"])
 
