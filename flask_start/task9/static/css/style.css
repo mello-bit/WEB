@@ -1,0 +1,12 @@
+.description {
+    text-align: center;
+}
+.carousel {
+    margin:0 auto;
+    background-color: brown;
+}
+
+.carousel-item {
+
+    text-align: center;
+}
