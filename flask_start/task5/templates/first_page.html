@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{url_for('static', filename='css/style.css')}" />
+    <link rel="stylesheet" href="../static/css/style.css">
+    <title>Пример формы</title>
+</head>
+
+<body>
+    <h1>Форма для регистрации в суперсекретной системе</h1>
+    <div class="con">
+        <form class="login_form" method="post">
+            <label for="sername">Введите вашу фамилию</label>
+            <input type="text" class="form-control" id="sername" placeholder="Введите вашу фамилию" name="sername">
+
+            <label for="name">Введите ваше имя</label>
+            <input type="text" class="form-control" id="name" placeholder="Введите ваше имя" name="name">
+
+
+            <label for="email">Введите вашу почту</label>
+            <input type="email" class="form-control" id="email" aria-describedby="emailHelp"
+                placeholder="Введите адрес почты" name="email">
+            
+            <label for="education">Введите ваше образование</label>
+            <input type="text" class="form-control" id="education" placeholder="Введите ваше образованеи"
+                name="education">
+
+            <div class="form-group" name="form_div">
+                <label for="form-check">Введите ваше образование</label>
+                <div class="form-check">
+                    <input class="form-check-input" for="research engineer" type="checkbox" name="research engineer" id="research engineer" value="research engineer" checked>
+                    <label class="form-check-label" for="research engineer">
+                        Инженер-исследователь
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" for="pilot" type="checkbox" name="pilot" id="pilot" value="pilot">
+                    <label class="form-check-label" for="pilot">
+                        Пилот
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" for="builder" type="checkbox" name="builder" id="builder" value="builder">
+                    <label class="form-check-label" for="builder">
+                        Строитель
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" for="exobiologist" type="checkbox" name="exobiologist" id="exobiologist" value="exobiologist">
+                    <label class="form-check-label" for="exobiologist">
+                        Экзобиолог
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" for="doctor" type="checkbox" name="doctor" id="doctor" value="doctor">
+                    <label class="form-check-label" for="doctor">
+                        Доктор
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" for="terraforming engineer" type="checkbox" name="sex" id="terraforming engineer" value="terraforming engineer">
+                    <label class="form-check-label" for="terraforming engineer">
+                        Инженер по терраформированию
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" for="climatologist" type="checkbox" name="climatologist" id="climatologist" value="climatologist">
+                    <label class="form-check-label" for="climatologist">
+                        Климатолог
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" for="radiation protection specialist" type="checkbox" name="radiation protection specialist" id="radiation protection specialist" value="radiation protection specialist">
+                    <label class="form-check-label" for="radiation protection specialist">
+                        Специалист по радиационной защите
+                    </label>
+                </div>
+                
+            </div>
+        
+            <div class="form-group">
+                <label for="photo">Приложите фотографию</label>
+                <input type="file" class="form-control-file" id="photo" name="file">
+            </div>
+            <div class="form-group">
+                <label for="form-check">Укажите пол</label>
+                <div class="form-check">
+                    <input class="form-check-input" for="male" type="radio" name="sex" id="male" value="male" checked>
+                    <label class="form-check-label" for="male">
+                        Мужской
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" for="female" type="radio" name="sex" id="female" value="female">
+                    <label class="form-check-label" for="female">
+                        Женский
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="about">Немного о себе</label>
+                <textarea class="form-control" id="about" rows="3" name="about"></textarea>
+            </div>
+            <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="acceptRules" name="accept">
+                <label class="form-check-label" for="acceptRules">Готов быть добровольцем</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Записаться</button>
+        </form>
+    </div>
+</body>
+</html>
