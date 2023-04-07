@@ -11,13 +11,13 @@ async def do_some_work(applicant):
         print(f"{name} moved on to the defense of the {i + 1} task.")
         await asyncio.sleep(applicant[2 + i] / 100)
         print(f"{name} completed the {i + 1} task.")
-        print(f"{name} is resting.")
 
         if i != 1:
+            print(f"{name} is resting.")
             await asyncio.sleep(5 / 100)
 
 
-async def main(*applicants):
+async def interviews(*applicants):
     applicantsTasks = []
     for j in range(len(applicants)):
         applicantsTasks.append(
@@ -32,5 +32,5 @@ if __name__ == '__main__':
 
     data = [('Ivan', 5, 2, 7, 2), ('John', 3, 4, 5, 1), ('Sophia', 4, 2, 5, 1)]
     t0 = time.time()
-    asyncio.run(main(*data))
+    asyncio.run(interviews(*data))
     print(time.time() - t0)
