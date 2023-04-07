@@ -6,20 +6,6 @@ from PIL import Image
 import json
 
 
-def get_data_of_company(json_response):
-    organization = json_response["features"][0]
-
-    org_name = organization["properties"]["CompanyMetaData"]["name"]
-    org_address = organization["properties"]["CompanyMetaData"]["address"]
-    hours = organization["properties"]["CompanyMetaData"]["Hours"]["text"]
-
-    return {
-        "address": org_address,
-        "name": org_name,
-        "hours": hours
-    }
-
-
 def length_of_the_way(cors1, cors2):
     deltaX = abs(float(cors1[0]) - float(cors2[0]))
     deltaY = abs(float(cors1[1]) - float(cors2[1]))
@@ -57,6 +43,7 @@ def search_coordinates(address: str):
 api_key = "245ecbd7-5831-42f5-99a3-24305300d58b"
 search_api_server = f"https://search-maps.yandex.ru/v1/"
 map_api_server = "http://static-maps.yandex.ru/1.x/"
+list_of_coordinates = []
 
 address_to_find = " ".join(sys.argv[1:])
 
@@ -68,7 +55,7 @@ search_params = {
     "lang": "ru_RU",
     "type": "biz",
     "apikey": api_key,
-    "ll": address_ll
+    "ll": address_ll,
 }
 
 response = requests.get(search_api_server, params=search_params)
@@ -81,37 +68,43 @@ if not response:
 json_response = response.json()
 with open("data.json", "w") as f:
     json.dump(json_response, f, indent=3)
-organization = json_response["features"][0]
 
-org_name = organization["properties"]["CompanyMetaData"]["name"]
-org_address = organization["properties"]["CompanyMetaData"]["address"]
-org_coordinates = organization["geometry"]["coordinates"]
-org_point = "{0},{1}".format(org_coordinates[0], org_coordinates[1])
-# delta = "0.005"
-lengthOfTheWay = length_of_the_way(address_ll.split(','), org_point.split(','))
-delta = str(lengthOfTheWay)
+# проходимся циклом до конца списка(либо до 10) и подставляем индекс за место числа в квадратных скобках
+for index in range(len(json_response["features"])):
+    organization = json_response["features"][index]
 
-companyMetaData = get_data_of_company(json_response)
-companyMetaData["length of the way"] = f"{lengthOfTheWay * 111.111} км"
+    org_coordinates = organization["geometry"]["coordinates"]
+    try:
+        hours = organization["properties"]["CompanyMetaData"]["Hours"]
+        if hours["Availabilities"]:
+            try:
+                if hours["Availabilities"][0]["Everyday"]:
+                    list_of_coordinates.append(
+                        "{0},{1},pm2dgm".format(
+                            org_coordinates[0], org_coordinates[1])
+                    )
+            except KeyError:
+                list_of_coordinates.append(
+                    "{0},{1},pm2blm".format(
+                        org_coordinates[0], org_coordinates[1])
+                )
+    except KeyError:
+        list_of_coordinates.append(
+            "{0},{1},pm2grm".format(org_coordinates[0], org_coordinates[1])
+        )
 
-print(companyMetaData)
-
+delta = "0.05"
 
 map_params = {
     "ll": address_ll,
     "spn": ",".join([delta, delta]),
     "l": "map",
     # добавим точку, чтобы указать найденную аптеку
-    "pt": "{0},pm2dgl".format(org_point) + "~" + "{0}".format(address_ll)
+    "pt": '~'.join(list_of_coordinates)
 }
 
 
 response = requests.get(map_api_server, params=map_params)
 
-# with open("map.png", "wb") as map_file:
-#     map_file.write(response.content)
 Image.open(BytesIO(
     response.content)).show()
-
-# print(org_name)
-# print(org_address)

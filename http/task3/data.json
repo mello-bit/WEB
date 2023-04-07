@@ -1,152 +1,717 @@
 {
-   "response": {
-      "GeoObjectCollection": {
-         "metaDataProperty": {
-            "GeocoderResponseMetaData": {
-               "boundedBy": {
-                  "Envelope": {
-                     "lowerCorner": "37.788567 55.758336",
-                     "upperCorner": "37.868445 55.803251"
-                  }
-               },
-               "request": "\u0430\u043f\u0442\u0435\u043a\u0430",
-               "results": "10",
-               "found": "2"
-            }
+   "type": "FeatureCollection",
+   "properties": {
+      "ResponseMetaData": {
+         "SearchResponse": {
+            "found": 48,
+            "display": "multiple",
+            "boundedBy": [
+               [
+                  37.63865099,
+                  55.73579831
+               ],
+               [
+                  37.71839501,
+                  55.78110534
+               ]
+            ]
          },
-         "featureMember": [
-            {
-               "GeoObject": {
-                  "metaDataProperty": {
-                     "GeocoderMetaData": {
-                        "precision": "other",
-                        "text": "\u0420\u043e\u0441\u0441\u0438\u044f, \u0421\u043c\u043e\u043b\u0435\u043d\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c, \u0412\u044f\u0437\u0435\u043c\u0441\u043a\u0438\u0439 \u0440\u0430\u0439\u043e\u043d, \u0441\u0430\u0434\u043e\u0432\u043e\u0435 \u043d\u0435\u043a\u043e\u043c\u043c\u0435\u0440\u0447\u0435\u0441\u043a\u043e\u0435 \u0442\u043e\u0432\u0430\u0440\u0438\u0449\u0435\u0441\u0442\u0432\u043e \u0410\u043f\u0442\u0435\u043a\u0430",
-                        "kind": "locality",
-                        "Address": {
-                           "country_code": "RU",
-                           "formatted": "\u0420\u043e\u0441\u0441\u0438\u044f, \u0421\u043c\u043e\u043b\u0435\u043d\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c, \u0412\u044f\u0437\u0435\u043c\u0441\u043a\u0438\u0439 \u0440\u0430\u0439\u043e\u043d, \u0441\u0430\u0434\u043e\u0432\u043e\u0435 \u043d\u0435\u043a\u043e\u043c\u043c\u0435\u0440\u0447\u0435\u0441\u043a\u043e\u0435 \u0442\u043e\u0432\u0430\u0440\u0438\u0449\u0435\u0441\u0442\u0432\u043e \u0410\u043f\u0442\u0435\u043a\u0430",
-                           "Components": [
-                              {
-                                 "kind": "country",
-                                 "name": "\u0420\u043e\u0441\u0441\u0438\u044f"
-                              },
-                              {
-                                 "kind": "province",
-                                 "name": "\u0426\u0435\u043d\u0442\u0440\u0430\u043b\u044c\u043d\u044b\u0439 \u0444\u0435\u0434\u0435\u0440\u0430\u043b\u044c\u043d\u044b\u0439 \u043e\u043a\u0440\u0443\u0433"
-                              },
-                              {
-                                 "kind": "province",
-                                 "name": "\u0421\u043c\u043e\u043b\u0435\u043d\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c"
-                              },
-                              {
-                                 "kind": "area",
-                                 "name": "\u0412\u044f\u0437\u0435\u043c\u0441\u043a\u0438\u0439 \u0440\u0430\u0439\u043e\u043d"
-                              },
-                              {
-                                 "kind": "locality",
-                                 "name": "\u0441\u0430\u0434\u043e\u0432\u043e\u0435 \u043d\u0435\u043a\u043e\u043c\u043c\u0435\u0440\u0447\u0435\u0441\u043a\u043e\u0435 \u0442\u043e\u0432\u0430\u0440\u0438\u0449\u0435\u0441\u0442\u0432\u043e \u0410\u043f\u0442\u0435\u043a\u0430"
-                              }
-                           ]
-                        },
-                        "AddressDetails": {
-                           "Country": {
-                              "AddressLine": "\u0420\u043e\u0441\u0441\u0438\u044f, \u0421\u043c\u043e\u043b\u0435\u043d\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c, \u0412\u044f\u0437\u0435\u043c\u0441\u043a\u0438\u0439 \u0440\u0430\u0439\u043e\u043d, \u0441\u0430\u0434\u043e\u0432\u043e\u0435 \u043d\u0435\u043a\u043e\u043c\u043c\u0435\u0440\u0447\u0435\u0441\u043a\u043e\u0435 \u0442\u043e\u0432\u0430\u0440\u0438\u0449\u0435\u0441\u0442\u0432\u043e \u0410\u043f\u0442\u0435\u043a\u0430",
-                              "CountryNameCode": "RU",
-                              "CountryName": "\u0420\u043e\u0441\u0441\u0438\u044f",
-                              "AdministrativeArea": {
-                                 "AdministrativeAreaName": "\u0421\u043c\u043e\u043b\u0435\u043d\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c",
-                                 "SubAdministrativeArea": {
-                                    "SubAdministrativeAreaName": "\u0412\u044f\u0437\u0435\u043c\u0441\u043a\u0438\u0439 \u0440\u0430\u0439\u043e\u043d",
-                                    "Locality": {
-                                       "LocalityName": "\u0441\u0430\u0434\u043e\u0432\u043e\u0435 \u043d\u0435\u043a\u043e\u043c\u043c\u0435\u0440\u0447\u0435\u0441\u043a\u043e\u0435 \u0442\u043e\u0432\u0430\u0440\u0438\u0449\u0435\u0441\u0442\u0432\u043e \u0410\u043f\u0442\u0435\u043a\u0430"
-                                    }
-                                 }
-                              }
-                           }
-                        }
-                     }
-                  },
-                  "name": "\u0441\u0430\u0434\u043e\u0432\u043e\u0435 \u043d\u0435\u043a\u043e\u043c\u043c\u0435\u0440\u0447\u0435\u0441\u043a\u043e\u0435 \u0442\u043e\u0432\u0430\u0440\u0438\u0449\u0435\u0441\u0442\u0432\u043e \u0410\u043f\u0442\u0435\u043a\u0430",
-                  "description": "\u0412\u044f\u0437\u0435\u043c\u0441\u043a\u0438\u0439 \u0440\u0430\u0439\u043e\u043d, \u0421\u043c\u043e\u043b\u0435\u043d\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c, \u0420\u043e\u0441\u0441\u0438\u044f",
-                  "boundedBy": {
-                     "Envelope": {
-                        "lowerCorner": "34.537645 55.430804",
-                        "upperCorner": "34.5459 55.431867"
-                     }
-                  },
-                  "Point": {
-                     "pos": "34.541912 55.431249"
+         "SearchRequest": {
+            "request": "\u0430\u043f\u0442\u0435\u043a\u0430",
+            "skip": 0,
+            "results": 10,
+            "boundedBy": [
+               [
+                  37.048427,
+                  55.43644866
+               ],
+               [
+                  38.175903,
+                  56.04690174
+               ]
+            ]
+         }
+      }
+   },
+   "features": [
+      {
+         "type": "Feature",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.665587,
+               55.76768
+            ]
+         },
+         "properties": {
+            "name": "\u0413\u043e\u0440\u0417\u0434\u0440\u0430\u0432",
+            "description": "\u0421\u0442\u0430\u0440\u0430\u044f \u0411\u0430\u0441\u043c\u0430\u043d\u043d\u0430\u044f \u0443\u043b., 25, \u0441\u0442\u0440. 5, \u041c\u043e\u0441\u043a\u0432\u0430, \u0420\u043e\u0441\u0441\u0438\u044f",
+            "boundedBy": [
+               [
+                  37.661213,
+                  55.765326
+               ],
+               [
+                  37.669423,
+                  55.769955
+               ]
+            ],
+            "CompanyMetaData": {
+               "id": "116644075474",
+               "name": "\u0413\u043e\u0440\u0417\u0434\u0440\u0430\u0432",
+               "address": "\u041c\u043e\u0441\u043a\u0432\u0430, \u0421\u0442\u0430\u0440\u0430\u044f \u0411\u0430\u0441\u043c\u0430\u043d\u043d\u0430\u044f \u0443\u043b\u0438\u0446\u0430, 25\u04415",
+               "url": "http://gorzdrav.org/",
+               "Phones": [
+                  {
+                     "type": "phone",
+                     "formatted": "+7 (499) 653-62-77"
                   }
-               }
-            },
-            {
-               "GeoObject": {
-                  "metaDataProperty": {
-                     "GeocoderMetaData": {
-                        "precision": "street",
-                        "text": "\u041a\u0430\u0437\u0430\u0445\u0441\u0442\u0430\u043d, \u0410\u043a\u0442\u044e\u0431\u0438\u043d\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c, \u0422\u0435\u043c\u0438\u0440\u0441\u043a\u0438\u0439 \u0440\u0430\u0439\u043e\u043d, \u0441\u0435\u043b\u043e \u041f\u0440\u043e\u043c\u044b\u0441\u0435\u043b \u0428\u0443\u0431\u0430\u0440\u043a\u0443\u0434\u044b\u043a, \u0443\u043b\u0438\u0446\u0430 \u0410\u043f\u0442\u0435\u043a\u0430",
-                        "kind": "street",
-                        "Address": {
-                           "country_code": "KZ",
-                           "formatted": "\u041a\u0430\u0437\u0430\u0445\u0441\u0442\u0430\u043d, \u0410\u043a\u0442\u044e\u0431\u0438\u043d\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c, \u0422\u0435\u043c\u0438\u0440\u0441\u043a\u0438\u0439 \u0440\u0430\u0439\u043e\u043d, \u0441\u0435\u043b\u043e \u041f\u0440\u043e\u043c\u044b\u0441\u0435\u043b \u0428\u0443\u0431\u0430\u0440\u043a\u0443\u0434\u044b\u043a, \u0443\u043b\u0438\u0446\u0430 \u0410\u043f\u0442\u0435\u043a\u0430",
-                           "Components": [
-                              {
-                                 "kind": "country",
-                                 "name": "\u041a\u0430\u0437\u0430\u0445\u0441\u0442\u0430\u043d"
-                              },
-                              {
-                                 "kind": "province",
-                                 "name": "\u0410\u043a\u0442\u044e\u0431\u0438\u043d\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c"
-                              },
-                              {
-                                 "kind": "area",
-                                 "name": "\u0422\u0435\u043c\u0438\u0440\u0441\u043a\u0438\u0439 \u0440\u0430\u0439\u043e\u043d"
-                              },
-                              {
-                                 "kind": "locality",
-                                 "name": "\u0441\u0435\u043b\u043e \u041f\u0440\u043e\u043c\u044b\u0441\u0435\u043b \u0428\u0443\u0431\u0430\u0440\u043a\u0443\u0434\u044b\u043a"
-                              },
-                              {
-                                 "kind": "street",
-                                 "name": "\u0443\u043b\u0438\u0446\u0430 \u0410\u043f\u0442\u0435\u043a\u0430"
-                              }
-                           ]
-                        },
-                        "AddressDetails": {
-                           "Country": {
-                              "AddressLine": "\u041a\u0430\u0437\u0430\u0445\u0441\u0442\u0430\u043d, \u0410\u043a\u0442\u044e\u0431\u0438\u043d\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c, \u0422\u0435\u043c\u0438\u0440\u0441\u043a\u0438\u0439 \u0440\u0430\u0439\u043e\u043d, \u0441\u0435\u043b\u043e \u041f\u0440\u043e\u043c\u044b\u0441\u0435\u043b \u0428\u0443\u0431\u0430\u0440\u043a\u0443\u0434\u044b\u043a, \u0443\u043b\u0438\u0446\u0430 \u0410\u043f\u0442\u0435\u043a\u0430",
-                              "CountryNameCode": "KZ",
-                              "CountryName": "\u041a\u0430\u0437\u0430\u0445\u0441\u0442\u0430\u043d",
-                              "AdministrativeArea": {
-                                 "AdministrativeAreaName": "\u0410\u043a\u0442\u044e\u0431\u0438\u043d\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c",
-                                 "SubAdministrativeArea": {
-                                    "SubAdministrativeAreaName": "\u0422\u0435\u043c\u0438\u0440\u0441\u043a\u0438\u0439 \u0440\u0430\u0439\u043e\u043d",
-                                    "Locality": {
-                                       "LocalityName": "\u0441\u0435\u043b\u043e \u041f\u0440\u043e\u043c\u044b\u0441\u0435\u043b \u0428\u0443\u0431\u0430\u0440\u043a\u0443\u0434\u044b\u043a",
-                                       "Thoroughfare": {
-                                          "ThoroughfareName": "\u0443\u043b\u0438\u0446\u0430 \u0410\u043f\u0442\u0435\u043a\u0430"
-                                       }
-                                    }
-                                 }
-                              }
-                           }
-                        }
-                     }
-                  },
-                  "name": "\u0443\u043b\u0438\u0446\u0430 \u0410\u043f\u0442\u0435\u043a\u0430",
-                  "description": "\u0441\u0435\u043b\u043e \u041f\u0440\u043e\u043c\u044b\u0441\u0435\u043b \u0428\u0443\u0431\u0430\u0440\u043a\u0443\u0434\u044b\u043a, \u0422\u0435\u043c\u0438\u0440\u0441\u043a\u0438\u0439 \u0440\u0430\u0439\u043e\u043d, \u0410\u043a\u0442\u044e\u0431\u0438\u043d\u0441\u043a\u0430\u044f \u043e\u0431\u043b\u0430\u0441\u0442\u044c, \u041a\u0430\u0437\u0430\u0445\u0441\u0442\u0430\u043d",
-                  "boundedBy": {
-                     "Envelope": {
-                        "lowerCorner": "56.556978 49.205137",
-                        "upperCorner": "56.56041 49.206203"
-                     }
-                  },
-                  "Point": {
-                     "pos": "56.558703 49.205708"
+               ],
+               "Categories": [
+                  {
+                     "class": "drugstores",
+                     "name": "\u0410\u043f\u0442\u0435\u043a\u0430"
                   }
+               ],
+               "Hours": {
+                  "text": "\u043f\u043d-\u043f\u0442 08:00\u201322:00; \u0441\u0431,\u0432\u0441 09:00\u201321:00",
+                  "Availabilities": [
+                     {
+                        "Intervals": [
+                           {
+                              "from": "08:00:00",
+                              "to": "22:00:00"
+                           }
+                        ],
+                        "Monday": true,
+                        "Tuesday": true,
+                        "Wednesday": true,
+                        "Thursday": true,
+                        "Friday": true
+                     },
+                     {
+                        "Intervals": [
+                           {
+                              "from": "09:00:00",
+                              "to": "21:00:00"
+                           }
+                        ],
+                        "Saturday": true,
+                        "Sunday": true
+                     }
+                  ]
                }
             }
-         ]
+         }
+      },
+      {
+         "type": "Feature",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.679822,
+               55.745707
+            ]
+         },
+         "properties": {
+            "name": "\u0421\u0442\u043e\u043b\u0438\u0447\u043a\u0438",
+            "description": "\u043f\u043b\u043e\u0449\u0430\u0434\u044c \u0420\u043e\u0433\u043e\u0436\u0441\u043a\u0430\u044f \u0417\u0430\u0441\u0442\u0430\u0432\u0430, 2/1\u04411, \u041c\u043e\u0441\u043a\u0432\u0430, \u0420\u043e\u0441\u0441\u0438\u044f",
+            "boundedBy": [
+               [
+                  37.67563,
+                  55.743289
+               ],
+               [
+                  37.683841,
+                  55.74792
+               ]
+            ],
+            "CompanyMetaData": {
+               "id": "36122156307",
+               "name": "\u0421\u0442\u043e\u043b\u0438\u0447\u043a\u0438",
+               "address": "\u041c\u043e\u0441\u043a\u0432\u0430, \u043f\u043b\u043e\u0449\u0430\u0434\u044c \u0420\u043e\u0433\u043e\u0436\u0441\u043a\u0430\u044f \u0417\u0430\u0441\u0442\u0430\u0432\u0430, 2/1\u04411",
+               "url": "https://stolichki.ru/",
+               "Phones": [
+                  {
+                     "type": "phone",
+                     "formatted": "+7 (495) 215-52-15"
+                  },
+                  {
+                     "type": "phone",
+                     "formatted": "*115"
+                  }
+               ],
+               "Categories": [
+                  {
+                     "class": "drugstores",
+                     "name": "\u0410\u043f\u0442\u0435\u043a\u0430"
+                  }
+               ],
+               "Hours": {
+                  "text": "\u043f\u043d-\u043f\u0442 08:00\u201323:00; \u0441\u0431,\u0432\u0441 09:00\u201321:00",
+                  "Availabilities": [
+                     {
+                        "Intervals": [
+                           {
+                              "from": "08:00:00",
+                              "to": "23:00:00"
+                           }
+                        ],
+                        "Monday": true,
+                        "Tuesday": true,
+                        "Wednesday": true,
+                        "Thursday": true,
+                        "Friday": true
+                     },
+                     {
+                        "Intervals": [
+                           {
+                              "from": "09:00:00",
+                              "to": "21:00:00"
+                           }
+                        ],
+                        "Saturday": true,
+                        "Sunday": true
+                     }
+                  ]
+               }
+            }
+         }
+      },
+      {
+         "type": "Feature",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.663513,
+               55.739758
+            ]
+         },
+         "properties": {
+            "name": "\u0421\u0442\u043e\u043b\u0438\u0447\u043a\u0438",
+            "description": "\u0422\u0430\u0433\u0430\u043d\u0441\u043a\u0430\u044f \u0443\u043b., 26, \u0441\u0442\u0440. 1, \u041c\u043e\u0441\u043a\u0432\u0430, \u0420\u043e\u0441\u0441\u0438\u044f",
+            "boundedBy": [
+               [
+                  37.659353,
+                  55.73735
+               ],
+               [
+                  37.667564,
+                  55.741982
+               ]
+            ],
+            "CompanyMetaData": {
+               "id": "1348848501",
+               "name": "\u0421\u0442\u043e\u043b\u0438\u0447\u043a\u0438",
+               "address": "\u041c\u043e\u0441\u043a\u0432\u0430, \u0422\u0430\u0433\u0430\u043d\u0441\u043a\u0430\u044f \u0443\u043b\u0438\u0446\u0430, 26\u04411",
+               "url": "https://stolichki.ru/",
+               "Phones": [
+                  {
+                     "type": "phone",
+                     "formatted": "+7 (495) 215-52-15"
+                  },
+                  {
+                     "type": "phone",
+                     "formatted": "*115"
+                  }
+               ],
+               "Categories": [
+                  {
+                     "class": "drugstores",
+                     "name": "\u0410\u043f\u0442\u0435\u043a\u0430"
+                  }
+               ],
+               "Hours": {
+                  "text": "\u043f\u043d-\u043f\u0442 08:00\u201322:00; \u0441\u0431,\u0432\u0441 09:00\u201321:00",
+                  "Availabilities": [
+                     {
+                        "Intervals": [
+                           {
+                              "from": "08:00:00",
+                              "to": "22:00:00"
+                           }
+                        ],
+                        "Monday": true,
+                        "Tuesday": true,
+                        "Wednesday": true,
+                        "Thursday": true,
+                        "Friday": true
+                     },
+                     {
+                        "Intervals": [
+                           {
+                              "from": "09:00:00",
+                              "to": "21:00:00"
+                           }
+                        ],
+                        "Saturday": true,
+                        "Sunday": true
+                     }
+                  ]
+               }
+            }
+         }
+      },
+      {
+         "type": "Feature",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.681708,
+               55.745454
+            ]
+         },
+         "properties": {
+            "name": "\u042d\u043a\u043e\u043d\u043e\u043c\u042a",
+            "description": "\u0420\u0430\u0431\u043e\u0447\u0430\u044f \u0443\u043b., 3/5, \u041c\u043e\u0441\u043a\u0432\u0430, \u0420\u043e\u0441\u0441\u0438\u044f",
+            "boundedBy": [
+               [
+                  37.677742,
+                  55.743188
+               ],
+               [
+                  37.685952,
+                  55.747819
+               ]
+            ],
+            "CompanyMetaData": {
+               "id": "1193156051",
+               "name": "\u042d\u043a\u043e\u043d\u043e\u043c\u042a",
+               "address": "\u041c\u043e\u0441\u043a\u0432\u0430, \u0420\u0430\u0431\u043e\u0447\u0430\u044f \u0443\u043b\u0438\u0446\u0430, 3/5",
+               "url": "http://econom-apt.ru/",
+               "Phones": [
+                  {
+                     "type": "phone",
+                     "formatted": "+7 (499) 340-12-37"
+                  },
+                  {
+                     "type": "phone",
+                     "formatted": "+7 (495) 155-09-09"
+                  }
+               ],
+               "Categories": [
+                  {
+                     "class": "drugstores",
+                     "name": "\u0410\u043f\u0442\u0435\u043a\u0430"
+                  }
+               ],
+               "Hours": {
+                  "text": "\u0435\u0436\u0435\u0434\u043d\u0435\u0432\u043d\u043e, \u043a\u0440\u0443\u0433\u043b\u043e\u0441\u0443\u0442\u043e\u0447\u043d\u043e",
+                  "Availabilities": [
+                     {
+                        "TwentyFourHours": true,
+                        "Everyday": true
+                     }
+                  ]
+               }
+            }
+         }
+      },
+      {
+         "type": "Feature",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.66431,
+               55.778383
+            ]
+         },
+         "properties": {
+            "name": "\u0421\u0442\u043e\u043b\u0438\u0447\u043a\u0438",
+            "description": "\u041a\u0440\u0430\u0441\u043d\u043e\u043f\u0440\u0443\u0434\u043d\u0430\u044f \u0443\u043b., 22-24, \u041c\u043e\u0441\u043a\u0432\u0430, \u0420\u043e\u0441\u0441\u0438\u044f",
+            "boundedBy": [
+               [
+                  37.661204,
+                  55.776401
+               ],
+               [
+                  37.669414,
+                  55.781028
+               ]
+            ],
+            "CompanyMetaData": {
+               "id": "1376717958",
+               "name": "\u0421\u0442\u043e\u043b\u0438\u0447\u043a\u0438",
+               "address": "\u041c\u043e\u0441\u043a\u0432\u0430, \u041a\u0440\u0430\u0441\u043d\u043e\u043f\u0440\u0443\u0434\u043d\u0430\u044f \u0443\u043b\u0438\u0446\u0430, 22-24",
+               "url": "https://stolichki.ru/",
+               "Phones": [
+                  {
+                     "type": "phone",
+                     "formatted": "+7 (495) 215-52-15"
+                  },
+                  {
+                     "type": "phone",
+                     "formatted": "*115"
+                  }
+               ],
+               "Categories": [
+                  {
+                     "class": "drugstores",
+                     "name": "\u0410\u043f\u0442\u0435\u043a\u0430"
+                  }
+               ],
+               "Hours": {
+                  "text": "\u043f\u043d-\u043f\u0442 08:00\u201321:00; \u0441\u0431,\u0432\u0441 09:00\u201321:00",
+                  "Availabilities": [
+                     {
+                        "Intervals": [
+                           {
+                              "from": "08:00:00",
+                              "to": "21:00:00"
+                           }
+                        ],
+                        "Monday": true,
+                        "Tuesday": true,
+                        "Wednesday": true,
+                        "Thursday": true,
+                        "Friday": true
+                     },
+                     {
+                        "Intervals": [
+                           {
+                              "from": "09:00:00",
+                              "to": "21:00:00"
+                           }
+                        ],
+                        "Saturday": true,
+                        "Sunday": true
+                     }
+                  ]
+               }
+            }
+         }
+      },
+      {
+         "type": "Feature",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.658162,
+               55.759106
+            ]
+         },
+         "properties": {
+            "name": "\u0420\u0438\u0433\u043b\u0430",
+            "description": "\u0443\u043b. \u0417\u0435\u043c\u043b\u044f\u043d\u043e\u0439 \u0412\u0430\u043b, 27, \u0441\u0442\u0440. 1, \u041c\u043e\u0441\u043a\u0432\u0430, \u0420\u043e\u0441\u0441\u0438\u044f",
+            "boundedBy": [
+               [
+                  37.654188,
+                  55.756721
+               ],
+               [
+                  37.662398,
+                  55.76135
+               ]
+            ],
+            "CompanyMetaData": {
+               "id": "1093888053",
+               "name": "\u0420\u0438\u0433\u043b\u0430",
+               "address": "\u041c\u043e\u0441\u043a\u0432\u0430, \u0443\u043b\u0438\u0446\u0430 \u0417\u0435\u043c\u043b\u044f\u043d\u043e\u0439 \u0412\u0430\u043b, 27, \u0441\u0442\u0440. 1",
+               "url": "https://www.rigla.ru/?utm_campaign=rigla_yandexgeo_mar23_feb24_UIDGrXkWj&utm_content=site&utm_medium=cpm&utm_source=yandexgeo",
+               "Phones": [
+                  {
+                     "type": "phone",
+                     "formatted": "8 (800) 777-03-03"
+                  },
+                  {
+                     "type": "phone",
+                     "formatted": "+7 (495) 730-27-30"
+                  },
+                  {
+                     "type": "phone",
+                     "formatted": "+7 (495) 231-16-97"
+                  },
+                  {
+                     "type": "phone",
+                     "formatted": "+7 (495) 231-16-97"
+                  },
+                  {
+                     "type": "phone",
+                     "formatted": "+7 (495) 231-16-97"
+                  },
+                  {
+                     "type": "phone",
+                     "formatted": "+7 (495) 917-13-76"
+                  }
+               ],
+               "Categories": [
+                  {
+                     "class": "drugstores",
+                     "name": "\u0410\u043f\u0442\u0435\u043a\u0430"
+                  }
+               ],
+               "Hours": {
+                  "text": "\u0435\u0436\u0435\u0434\u043d\u0435\u0432\u043d\u043e, \u043a\u0440\u0443\u0433\u043b\u043e\u0441\u0443\u0442\u043e\u0447\u043d\u043e",
+                  "Availabilities": [
+                     {
+                        "TwentyFourHours": true,
+                        "Everyday": true
+                     }
+                  ]
+               }
+            }
+         }
+      },
+      {
+         "type": "Feature",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.662821,
+               55.761155
+            ]
+         },
+         "properties": {
+            "name": "\u0413\u043e\u0440\u0417\u0434\u0440\u0430\u0432",
+            "description": "\u041d\u0438\u0436\u043d\u0438\u0439 \u0421\u0443\u0441\u0430\u043b\u044c\u043d\u044b\u0439 \u043f\u0435\u0440., 5, \u0441\u0442\u0440. 1, \u041c\u043e\u0441\u043a\u0432\u0430, \u0420\u043e\u0441\u0441\u0438\u044f",
+            "boundedBy": [
+               [
+                  37.658895,
+                  55.75898
+               ],
+               [
+                  37.667105,
+                  55.763609
+               ]
+            ],
+            "CompanyMetaData": {
+               "id": "51589613360",
+               "name": "\u0413\u043e\u0440\u0417\u0434\u0440\u0430\u0432",
+               "address": "\u041c\u043e\u0441\u043a\u0432\u0430, \u041d\u0438\u0436\u043d\u0438\u0439 \u0421\u0443\u0441\u0430\u043b\u044c\u043d\u044b\u0439 \u043f\u0435\u0440\u0435\u0443\u043b\u043e\u043a, 5\u04411",
+               "url": "http://gorzdrav.org/",
+               "Phones": [
+                  {
+                     "type": "phone",
+                     "formatted": "+7 (499) 653-62-77"
+                  }
+               ],
+               "Categories": [
+                  {
+                     "class": "drugstores",
+                     "name": "\u0410\u043f\u0442\u0435\u043a\u0430"
+                  }
+               ],
+               "Hours": {
+                  "text": "\u043f\u043d-\u043f\u0442 08:00\u201322:00; \u0441\u0431,\u0432\u0441 09:00\u201321:00",
+                  "Availabilities": [
+                     {
+                        "Intervals": [
+                           {
+                              "from": "08:00:00",
+                              "to": "22:00:00"
+                           }
+                        ],
+                        "Monday": true,
+                        "Tuesday": true,
+                        "Wednesday": true,
+                        "Thursday": true,
+                        "Friday": true
+                     },
+                     {
+                        "Intervals": [
+                           {
+                              "from": "09:00:00",
+                              "to": "21:00:00"
+                           }
+                        ],
+                        "Saturday": true,
+                        "Sunday": true
+                     }
+                  ]
+               }
+            }
+         }
+      },
+      {
+         "type": "Feature",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.678886,
+               55.772016
+            ]
+         },
+         "properties": {
+            "name": "\u0413\u043e\u0440\u0417\u0434\u0440\u0430\u0432",
+            "description": "\u0411\u0430\u0443\u043c\u0430\u043d\u0441\u043a\u0430\u044f \u0443\u043b., 35/1, \u041c\u043e\u0441\u043a\u0432\u0430, \u0420\u043e\u0441\u0441\u0438\u044f",
+            "boundedBy": [
+               [
+                  37.674948,
+                  55.769433
+               ],
+               [
+                  37.683158,
+                  55.774062
+               ]
+            ],
+            "CompanyMetaData": {
+               "id": "1744397114",
+               "name": "\u0413\u043e\u0440\u0417\u0434\u0440\u0430\u0432",
+               "address": "\u041c\u043e\u0441\u043a\u0432\u0430, \u0411\u0430\u0443\u043c\u0430\u043d\u0441\u043a\u0430\u044f \u0443\u043b\u0438\u0446\u0430, 35/1",
+               "url": "http://gorzdrav.org/",
+               "Phones": [
+                  {
+                     "type": "phone",
+                     "formatted": "+7 (499) 653-62-77"
+                  }
+               ],
+               "Categories": [
+                  {
+                     "class": "drugstores",
+                     "name": "\u0410\u043f\u0442\u0435\u043a\u0430"
+                  }
+               ],
+               "Hours": {
+                  "text": "\u043f\u043d-\u043f\u0442 07:00\u201323:00; \u0441\u0431,\u0432\u0441 08:00\u201322:00",
+                  "Availabilities": [
+                     {
+                        "Intervals": [
+                           {
+                              "from": "07:00:00",
+                              "to": "23:00:00"
+                           }
+                        ],
+                        "Monday": true,
+                        "Tuesday": true,
+                        "Wednesday": true,
+                        "Thursday": true,
+                        "Friday": true
+                     },
+                     {
+                        "Intervals": [
+                           {
+                              "from": "08:00:00",
+                              "to": "22:00:00"
+                           }
+                        ],
+                        "Saturday": true,
+                        "Sunday": true
+                     }
+                  ]
+               }
+            }
+         }
+      },
+      {
+         "type": "Feature",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.679632,
+               55.772551
+            ]
+         },
+         "properties": {
+            "name": "\u041f\u043b\u0430\u043d\u0435\u0442\u0430 \u0437\u0434\u043e\u0440\u043e\u0432\u044c\u044f",
+            "description": "\u0411\u0430\u0443\u043c\u0430\u043d\u0441\u043a\u0430\u044f \u0443\u043b., 33/2, \u041c\u043e\u0441\u043a\u0432\u0430, \u0420\u043e\u0441\u0441\u0438\u044f",
+            "boundedBy": [
+               [
+                  37.676008,
+                  55.770071
+               ],
+               [
+                  37.684218,
+                  55.7747
+               ]
+            ],
+            "CompanyMetaData": {
+               "id": "70116624618",
+               "name": "\u041f\u043b\u0430\u043d\u0435\u0442\u0430 \u0437\u0434\u043e\u0440\u043e\u0432\u044c\u044f",
+               "address": "\u041c\u043e\u0441\u043a\u0432\u0430, \u0411\u0430\u0443\u043c\u0430\u043d\u0441\u043a\u0430\u044f \u0443\u043b\u0438\u0446\u0430, 33/2",
+               "url": "https://planetazdorovo.ru/",
+               "Phones": [
+                  {
+                     "type": "phone",
+                     "formatted": "+7 (495) 369-33-00"
+                  }
+               ],
+               "Categories": [
+                  {
+                     "class": "drugstores",
+                     "name": "\u0410\u043f\u0442\u0435\u043a\u0430"
+                  }
+               ],
+               "Hours": {
+                  "text": "\u0435\u0436\u0435\u0434\u043d\u0435\u0432\u043d\u043e, \u043a\u0440\u0443\u0433\u043b\u043e\u0441\u0443\u0442\u043e\u0447\u043d\u043e",
+                  "Availabilities": [
+                     {
+                        "TwentyFourHours": true,
+                        "Everyday": true
+                     }
+                  ]
+               }
+            }
+         }
+      },
+      {
+         "type": "Feature",
+         "geometry": {
+            "type": "Point",
+            "coordinates": [
+               37.677752,
+               55.745788
+            ]
+         },
+         "properties": {
+            "name": "\u0413\u043e\u0440\u0417\u0434\u0440\u0430\u0432",
+            "description": "\u0443\u043b. \u0420\u043e\u0433\u043e\u0436\u0441\u043a\u0438\u0439 \u0412\u0430\u043b, 2/50, \u041c\u043e\u0441\u043a\u0432\u0430, \u0420\u043e\u0441\u0441\u0438\u044f",
+            "boundedBy": [
+               [
+                  37.67369,
+                  55.74332
+               ],
+               [
+                  37.681901,
+                  55.747951
+               ]
+            ],
+            "CompanyMetaData": {
+               "id": "160442003338",
+               "name": "\u0413\u043e\u0440\u0417\u0434\u0440\u0430\u0432",
+               "address": "\u041c\u043e\u0441\u043a\u0432\u0430, \u0443\u043b\u0438\u0446\u0430 \u0420\u043e\u0433\u043e\u0436\u0441\u043a\u0438\u0439 \u0412\u0430\u043b, 2/50",
+               "url": "http://gorzdrav.org/",
+               "Phones": [
+                  {
+                     "type": "phone",
+                     "formatted": "+7 (499) 653-62-77"
+                  }
+               ],
+               "Categories": [
+                  {
+                     "class": "drugstores",
+                     "name": "\u0410\u043f\u0442\u0435\u043a\u0430"
+                  }
+               ],
+               "Hours": {
+                  "text": "\u043f\u043d-\u043f\u0442 08:00\u201322:00; \u0441\u0431,\u0432\u0441 09:00\u201321:00",
+                  "Availabilities": [
+                     {
+                        "Intervals": [
+                           {
+                              "from": "08:00:00",
+                              "to": "22:00:00"
+                           }
+                        ],
+                        "Monday": true,
+                        "Tuesday": true,
+                        "Wednesday": true,
+                        "Thursday": true,
+                        "Friday": true
+                     },
+                     {
+                        "Intervals": [
+                           {
+                              "from": "09:00:00",
+                              "to": "21:00:00"
+                           }
+                        ],
+                        "Saturday": true,
+                        "Sunday": true
+                     }
+                  ]
+               }
+            }
+         }
       }
-   }
+   ]
 }
