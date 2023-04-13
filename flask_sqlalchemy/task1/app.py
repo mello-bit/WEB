@@ -5,7 +5,7 @@ from forms import LoginForm, SignUpForm
 from flask_login import LoginManager, login_user
 
 
-global_init("alpha.db")
+global_init("alpha.db")  # bd лежит в папке WEB т.к venv тоже лежит в WEB
 db_sess = create_session()
 
 app = Flask(__name__)
@@ -41,12 +41,12 @@ def login():
 def signUp():
     signUpForm = SignUpForm()
     print("SignUp")
-    
+
     if signUpForm.is_submitted():
         user = User(email=signUpForm.email.data,
                     password=signUpForm.password.data,
                     nickname=signUpForm.nickname.data)
-        
+
         print(user, 1)
         db_sess.add(user)
         db_sess.commit()
