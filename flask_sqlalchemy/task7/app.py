@@ -5,9 +5,10 @@ from flask import Flask, render_template, redirect
 from forms import LoginForm, SignUpForm, AddJobs
 from flask_login import LoginManager, login_user
 import hashlib
+import sqlite3
 
 
-global_init("ultimate.db")  # bd лежит в папке WEB т.к venv тоже лежит в WEB
+global_init("task8.db")  # bd лежит в папке WEB т.к venv тоже лежит в WEB
 db_sess = create_session()
 
 app = Flask(__name__)
@@ -30,30 +31,79 @@ def showJobsList():
     if nickname is not None:
         return render_template('jobs.html', jobs=jobs, nickname=nickname)
 
-    return render_template('jobs.html', jobs=jobs)
+    return redirect('/sign_up')
+
+
+@app.route('/edit/<jobTitle>/<teamLeaderId>/<workSize>/<collaborators>/<isFinished>/<nameOfCreator>/', methods=["GET", "POST"])
+def edit(jobTitle, teamLeaderId, workSize, collaborators, isFinished, nameOfCreator):
+    if nickname == None:
+        return redirect('/sign_up')
+
+    captainName = db_sess.query(User).filter(User.id == 1).first()
+    if nameOfCreator != nickname and nickname != captainName.nickname:
+        return redirect('/')
+
+    addJob = AddJobs()
+
+    if addJob.validate_on_submit():
+        try:
+            currentJob = db_sess.query(Job).filter(Job.nameOfCreator == nickname).update({
+                "jobTitle": str(addJob.jobTitle.data),
+                "teamLeaderId": int(addJob.teamLeaderId.data),
+                "workSize": int(addJob.workSize.data),
+                "collaborators": str(addJob.collaborators.data),
+                "isFinished": bool(addJob.isFinished.data),
+                "nameOfCreator": str(nickname)
+            })
+            db_sess.commit()
+
+            return redirect('/')
+        except Exception:
+            return render_template('jobsForm.html', titleOfPage="Edit Job", form=addJob,
+                                   currentJobTitle=jobTitle,
+                                   currentTeamLeaderId=teamLeaderId,
+                                   currentWorkSize=workSize,
+                                   currentCollaborator=collaborators, nickname=nickname, message="Isn't valid data")
+
+    return render_template('jobsForm.html', titleOfPage="Edit Job", form=addJob,
+                           currentJobTitle=jobTitle,
+                           currentTeamLeaderId=teamLeaderId,
+                           currentWorkSize=workSize,
+                           currentCollaborator=collaborators, nickname=nickname)
 
 
 @app.route('/add_job', methods=["GET", "POST"])
 def addJob():
+
+    if nickname is None:
+        return redirect('/sign_up')
     addJob = AddJobs()
 
     if addJob.validate_on_submit():
-        job = Job(
-            jobTitle=addJob.jobTitle.data,
-            teamLeaderId=addJob.teamLeaderId.data,
-            workSize=addJob.workSize.data,
-            collaborators=addJob.collaborators.data,
-            isFinished=addJob.isFinished.data
-        )
+        try:
+            
+            job = Job(
+                jobTitle=addJob.jobTitle.data,
+                teamLeaderId=int(addJob.teamLeaderId.data),
+                workSize=int(addJob.workSize.data),
+                collaborators=addJob.collaborators.data,
+                isFinished=addJob.isFinished.data,
+                nameOfCreator=nickname
+            )
+        except Exception:
+            return render_template('jobsForm.html', titleOfPage="Add New Job",
+                                   title="Добавление работы",
+                                   form=addJob, nickname=nickname,
+                                   message="Isn't valid data!!")
 
         db_sess.add(job)
         db_sess.commit()
         return redirect('/')
 
     if nickname is not None:
-        return render_template('jobsForm.html', title="Добавление работы", form=addJob, nickname=nickname)
+        return render_template('jobsForm.html', titleOfPage="Add New Job", title="Добавление работы", form=addJob, nickname=nickname)
 
-    return render_template('jobsForm.html', title="Добавление работы", form=addJob)
+    return render_template('jobsForm.html', titleOfPage="Add New Job", title="Добавление работы", form=addJob)
 
 
 @app.route('/login', methods=["GET", "POST"])
@@ -67,7 +117,7 @@ def login():
             User.email == loginForm.email.data).first()
         if user:
             databasePassword = user.password
-            
+
             if databasePassword == \
                     hashlib.md5((loginForm.password.data + app.config['salt']).encode()).hexdigest():
 
@@ -93,17 +143,26 @@ def signUp():
     if signUpForm.is_submitted():
         databasePassword = hashlib.md5(
             (signUpForm.password.data + app.config['salt']).encode())
-        user = User(email=signUpForm.email.data,
-                    password=databasePassword.hexdigest(),
-                    jobsList=signUpForm.jobsList.data,
-                    nickname=signUpForm.nickname.data)
+
+        ne = db_sess.query(User).filter(
+            User.nickname == signUpForm.nickname.data).all()
+        repEmail = db_sess.query(User).filter(User.email == signUpForm.email.data).all()
+        if len(ne) == 0 and len(repEmail) == 0:
+            user = User(email=signUpForm.email.data,
+                        password=databasePassword.hexdigest(),
+                        jobsList=signUpForm.jobsList.data,
+                        nickname=signUpForm.nickname.data)
+        else:
+            print("This nickname has already been creating")
+            return render_template('signUp.html', title="Авторизация", form=signUpForm, message="Такой nickname уже есть :)")
 
         print(user, 1)
         db_sess.add(user)
         db_sess.commit()
         print(user, 2)
         nickname = user.nickname
-        return render_template('signUp.html', message="Everything is ok", form=signUpForm, nickname=nickname)
+        # return render_template('signUp.html', message="Everything is ok", form=signUpForm, nickname=nickname)
+        return redirect('/')
 
     if nickname is not None:
         return render_template('signUp.html', title="Авторизация", form=signUpForm, nickname=nickname)

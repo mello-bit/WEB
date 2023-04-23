@@ -39,7 +39,8 @@ def edit(jobTitle, teamLeaderId, workSize, collaborators, isFinished, nameOfCrea
     if nickname == None:
         return redirect('/sign_up')
 
-    if nameOfCreator != nickname:
+    captainName = db_sess.query(User).filter(User.id == 1).first()
+    if nameOfCreator != nickname and nickname != captainName.nickname:
         return redirect('/')
 
     addJob = AddJobs()
@@ -79,14 +80,21 @@ def addJob():
     addJob = AddJobs()
 
     if addJob.validate_on_submit():
-        job = Job(
-            jobTitle=addJob.jobTitle.data,
-            teamLeaderId=addJob.teamLeaderId.data,
-            workSize=addJob.workSize.data,
-            collaborators=addJob.collaborators.data,
-            isFinished=addJob.isFinished.data,
-            nameOfCreator=nickname
-        )
+        try:
+            
+            job = Job(
+                jobTitle=addJob.jobTitle.data,
+                teamLeaderId=int(addJob.teamLeaderId.data),
+                workSize=int(addJob.workSize.data),
+                collaborators=addJob.collaborators.data,
+                isFinished=addJob.isFinished.data,
+                nameOfCreator=nickname
+            )
+        except Exception:
+            return render_template('jobsForm.html', titleOfPage="Add New Job",
+                                   title="Добавление работы",
+                                   form=addJob, nickname=nickname,
+                                   message="Isn't valid data!!")
 
         db_sess.add(job)
         db_sess.commit()
@@ -138,7 +146,8 @@ def signUp():
 
         ne = db_sess.query(User).filter(
             User.nickname == signUpForm.nickname.data).all()
-        if len(ne) == 0:
+        repEmail = db_sess.query(User).filter(User.email == signUpForm.email.data).all()
+        if len(ne) == 0 and len(repEmail) == 0:
             user = User(email=signUpForm.email.data,
                         password=databasePassword.hexdigest(),
                         jobsList=signUpForm.jobsList.data,

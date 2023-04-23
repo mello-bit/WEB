@@ -9,7 +9,7 @@ class User(SqlAlchemyBase, UserMixin):
 
     id = sqlalchemy.Column(
         sqlalchemy.Integer, primary_key=True, autoincrement=True)
-    nickname = sqlalchemy.Column(sqlalchemy.String)
+    nickname = sqlalchemy.Column(sqlalchemy.String, unique=True)
     email = sqlalchemy.Column(sqlalchemy.String)
     jobsList = sqlalchemy.Column(sqlalchemy.String)
     password = sqlalchemy.Column(sqlalchemy.String)

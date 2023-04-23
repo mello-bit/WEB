@@ -2,13 +2,13 @@
 
 {% block content %}
 <a href="/logout" class="link-primary">{{nickname}}</a>
-<h1>Добавление работы</h1>
+<h1>{{ titleOfPage }}</h1>
 <form action="" method="post" style="width: 400px; display: inline-block; text-align: center;">
     {{ form.hidden_tag() }}
     
     <p>
         {{ form.jobTitle.label }}<br>
-        {{ form.jobTitle(class="form-control", type="text") }}<br>
+        {{ form.jobTitle(class="form-control", type="text", value=currentJobTitle) }}<br>
         {% for error in form.jobTitle.errors %}
             <div class="alert alert-danger" role="alert">
                 {{ error }}
@@ -17,7 +17,7 @@
     </p>
     <p>
         {{ form.teamLeaderId.label }}<br>
-        {{ form.teamLeaderId(class="form-control", type="text") }}<br>
+        {{ form.teamLeaderId(class="form-control", type="text", value=currentTeamLeaderId) }}<br>
         {% for error in form.teamLeaderId.errors %}
             <div class="alert alert-danger" role="alert">
                 {{ error }}
@@ -26,7 +26,7 @@
     </p>
     <p>
         {{ form.workSize.label }}<br>
-        {{ form.workSize(class="form-control", type="text") }}<br>
+        {{ form.workSize(class="form-control", type="text", value=currentWorkSize) }}<br>
         {% for error in form.workSize.errors %}
             <div class="alert alert-danger" role="alert">
                 {{ error }}
@@ -35,7 +35,7 @@
     </p>
     <p>
         {{ form.collaborators.label }}<br>
-        {{ form.collaborators(class="form-control", type="text") }}<br>
+        {{ form.collaborators(class="form-control", type="text", value=currentCollaborator) }}<br>
         {% for error in form.collaborators.errors %}
             <div class="alert alert-danger" role="alert">
                 {{ error }}

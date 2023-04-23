@@ -14,3 +14,4 @@ class Job(SqlAlchemyBase, UserMixin):
     workSize = sqlalchemy.Column(sqlalchemy.Integer)
     collaborators = sqlalchemy.Column(sqlalchemy.String)
     isFinished = sqlalchemy.Column(sqlalchemy.Boolean)
+    nameOfCreator = sqlalchemy.Column(sqlalchemy.String)
