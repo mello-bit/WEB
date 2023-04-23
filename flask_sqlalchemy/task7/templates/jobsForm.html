@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<a href="/logout" class="link-primary">{{nickname}}</a>
+<h1>Добавление работы</h1>
+<form action="" method="post" style="width: 400px; display: inline-block; text-align: center;">
+    {{ form.hidden_tag() }}
+    
+    <p>
+        {{ form.jobTitle.label }}<br>
+        {{ form.jobTitle(class="form-control", type="text") }}<br>
+        {% for error in form.jobTitle.errors %}
+            <div class="alert alert-danger" role="alert">
+                {{ error }}
+            </div>
+        {% endfor %}
+    </p>
+    <p>
+        {{ form.teamLeaderId.label }}<br>
+        {{ form.teamLeaderId(class="form-control", type="text") }}<br>
+        {% for error in form.teamLeaderId.errors %}
+            <div class="alert alert-danger" role="alert">
+                {{ error }}
+            </div>
+        {% endfor %}
+    </p>
+    <p>
+        {{ form.workSize.label }}<br>
+        {{ form.workSize(class="form-control", type="text") }}<br>
+        {% for error in form.workSize.errors %}
+            <div class="alert alert-danger" role="alert">
+                {{ error }}
+            </div>
+        {% endfor %}
+    </p>
+    <p>
+        {{ form.collaborators.label }}<br>
+        {{ form.collaborators(class="form-control", type="text") }}<br>
+        {% for error in form.collaborators.errors %}
+            <div class="alert alert-danger" role="alert">
+                {{ error }}
+            </div>
+        {% endfor %}
+    </p>
+    <p>{{ form.isFinished() }} {{ form.isFinished.label }}</p>
+    <p>{{ form.submit(type="submit", class="btn btn-primary") }}</p>
+    <div>{{ message }}</div>
+</form>
+{% endblock %}
