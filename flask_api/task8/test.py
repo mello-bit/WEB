@@ -49,15 +49,16 @@ def checkGettingOneJob(id):
     return "Плохо, что-то не соответствует. Работа из бд и из url отличаются"
 
 
-def checkAddJob(id):
+def checkAddJob(id, jobTitle="First job from POST request",
+                teamLeaderId=1, workSize=200, collaborators="13", isFinished=True, nameOfCreator="Dany Kiper"):
     resOfPost = requests.post(urlForAddingJob, json={
         "id": id,
-        "jobTitle": "First job from POST request",
-        "teamLeaderId": "1",
-        "workSize": "200",
-        "collaborators": "13",
-        "isFinished": True,
-        "nameOfCreator": "Dany Kiper"
+        "jobTitle": jobTitle,
+        "teamLeaderId": teamLeaderId,
+        "workSize": workSize,
+        "collaborators": collaborators,
+        "isFinished": isFinished,
+        "nameOfCreator": nameOfCreator
     }).json()
 
     print(resOfPost)
@@ -70,5 +71,9 @@ def checkOfDeleteJob(id):
 
 
 if __name__ == '__main__':
-    # checkOfDeleteJob(9000000000000)
-    checkOfDeleteJob(id=-90)
+    checkOfDeleteJob(id=11)  # тест корректного запроса на удаления
+    checkOfDeleteJob(id=90)  # тест некорректного запроса на удаления
+    checkOfDeleteJob(id="900")  # тест некорректного запроса на удаления
+    checkOfDeleteJob(id="ghghgh")  # тест некорректного запроса на удаления
+    
+    print(checkGettingAllJobs())

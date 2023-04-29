@@ -15,17 +15,24 @@ blueprint = flask.Blueprint(
 )
 
 
-@blueprint.route('/api/jobs/<int:jobId>', methods=["DELETE"])
+@blueprint.route('/api/jobs/<jobId>', methods=["DELETE"])
 def deleteJobById(jobId):
-    job = db_sess.query(Job).filter(Job.id == int(jobId)).first()
 
-    if not job:
-        return jsonify({"error": "Not found"})
+    try:
+        jobId = int(jobId)
+        if isinstance(jobId, int) and jobId >= 1:
+            job = db_sess.query(Job).filter(Job.id == int(jobId)).first()
 
-    db_sess.delete(job)
-    db_sess.commit()
+            if not job:
+                return jsonify({"error": "Not found"})
 
-    return jsonify({"success": "ok"})
+            db_sess.delete(job)
+            db_sess.commit()
+
+            return jsonify({"success": "ok"})
+    except Exception as e:
+        print(e)
+        return jsonify({"error": "Bad Id in request"})
 
 
 @blueprint.app_errorhandler(404)
