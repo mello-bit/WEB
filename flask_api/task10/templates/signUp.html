@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block content %}
+    
+    <a href="/logout" class="link-primary">{{nickname}}</a>
+    <h1>Регистрация</h1>
+    <form action="" method="post" style="width: 400px; display: inline-block;">
+        {{ form.hidden_tag() }}
+
+        <p>
+            {{ form.nickname.label }} <br>
+            {{ form.nickname(class="form-control", type="text") }} <br>
+        </p>
+
+        <p>
+            {{ form.email.label }}<br>
+            {{ form.email(class="form-control", type="email") }}<br>
+            {% for error in form.email.errors %}
+                <div class="alert alert-danger" role="alert">
+                    {{ error }}
+                </div>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.jobsList.label }}<br>
+            {{ form.jobsList(class="form-control", type="text") }}
+        </p>
+        <p>
+            {{ form.password.label }}<br>
+            {{ form.password(class="form-control", type="password") }}<br>
+            {% for error in form.password.errors %}
+                <div class="alert alert-danger" role="alert">
+                    {{ error }}
+                </div>
+            {% endfor %}
+        </p>
+        <p>{{ form.remember_me() }} {{ form.remember_me.label }}</p>
+        <p>{{ form.submit(type="submit", class="btn btn-primary") }}</p>
+        <div>{{ message }}</div>
+    </form>
+{% endblock %}
