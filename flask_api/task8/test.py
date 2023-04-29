@@ -71,7 +71,7 @@ def checkOfDeleteJob(id):
 
 
 if __name__ == '__main__':
-    checkOfDeleteJob(id=11)  # тест корректного запроса на удаления
+    checkOfDeleteJob(id=3)  # тест корректного запроса на удаления
     checkOfDeleteJob(id=90)  # тест некорректного запроса на удаления
     checkOfDeleteJob(id="900")  # тест некорректного запроса на удаления
     checkOfDeleteJob(id="ghghgh")  # тест некорректного запроса на удаления
