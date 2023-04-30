@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+    {% if error %}
+        <h1>{{ message }}</h1>
+    {% else %}
+        <h1>Nostalgia</h1>
+
+        <h3>{{ user }}</h3>
+        <h5>Hometown {{ cityFrom }}</h5>
+
+        <img src="{{ url_for('static', filename='map.jpg') }}" alt="">
+    {% endif %}
+
+
+{% endblock %}

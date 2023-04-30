@@ -1,0 +1,30 @@
+import discord
+import json
+import asyncio
+from discord.ext import commands
+
+with open("config.json") as cfg:
+    config = json.load(cfg)
+
+prefix = config["PREFIX"]
+bot_token = config["TOKEN"]
+intents = discord.Intents.default()
+intents.messages = True
+intents.message_content = True
+bot = commands.Bot(prefix, intents=intents)
+
+
+@bot.command()
+async def set_timer(ctx, msg=None):
+    if msg is None:
+        await ctx.send("Формат установки таймера: `минуты:часы`")
+        return await ctx.send(f"Например: {prefix}set_timer 02:59")
+
+    minutes, seconds = map(int, msg.split(":"))
+    await ctx.send(f"Таймер выйдет через {minutes} минут и {seconds} секунд")
+    await asyncio.sleep(minutes * 60 + seconds)
+    await ctx.send(f"{ctx.author.mention} таймер прозвенел!")
+
+
+if __name__ == "__main__":
+    bot.run(bot_token)
